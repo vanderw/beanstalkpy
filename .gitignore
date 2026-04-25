@@ -1,0 +1,10 @@
+idea.md
+project.md
+GEMINI.md
+
+.venv
+__pycache__
+.pytest_cache
+
+build
+dist

@@ -1,0 +1,33 @@
+[project]
+name = "beanstalkpy"
+version = "0.1.2"
+description = "Python pure asyncio SDK for beanstalkd"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Gemini", email = "grant.vanderwaal@gmail.com"}
+]
+dependencies = [
+    "PyYAML>=6.0",  # For stats parsing
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "mypy",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
